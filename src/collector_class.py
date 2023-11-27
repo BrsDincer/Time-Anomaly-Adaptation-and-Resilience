@@ -2,6 +2,18 @@ from util_main import CLASSINIT,PROCESS,NULL,ERROR,DOCUMENTATION,ErrorModule
 import time
 
 class DataCollector(object):
+    """
+    Handles the collection and analysis of simulation data.
+
+    The DataCollector class is responsible for gathering data from each iteration of the simulation, storing it, and providing analytical capabilities to interpret the data. It tracks various parameters over time, enabling an understanding of how the simulation evolves and responds to changes in the environment and organism behavior.
+
+    Attributes:
+        data (list): A list to store data points collected during the simulation.
+
+    Methods:
+        CollectData(timeRate): Collects data in each simulation iteration, storing the current time rate and timestamp.
+        AnalyzeData(): Analyzes the collected data to identify patterns, changes in states, and calculate probabilities. Returns a summary of state changes, frequency of changes, and the probability of change occurrences.
+    """
     def __init__(self)->CLASSINIT:
         self.data = []
     def __str__(self)->str:
